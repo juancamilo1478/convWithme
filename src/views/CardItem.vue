@@ -1,5 +1,5 @@
 <template>
-    <div class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl  bg-brand-colorOne py-10 rounded-lg shadow-md flex flex-col items-center ">
+    <div class="max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl  bg-brand-colorOne py-10 px-10 rounded-lg shadow-md flex flex-col items-center ">
       <!-- Icono renderizado desde el slot -->
       <div class="icon mb-2">
         <slot name="icon"></slot>

@@ -4,9 +4,11 @@
             <div class="lg:flex">
                 <div class="w-full -mx-6 lg:w-2/5">
                     <div class="px-6">
-                        <a href="#">
-                            <img class="w-auto h-7" src="https://merakiui.com/images/full-logo.svg" alt="">
-                        </a>
+                        <div  class="flex items-center">
+                            <img class="w-auto h-6 sm:h-7" src="../assets/logo.png" alt="Logo">
+                            <h1 class="text-white ml-2 text-2xl font-nunito font-bold">ConvWithMe</h1>
+                        </div>
+              
     
                         <p class="max-w-sm mt-2 text-white  hover:underline font-nunito font-bold">Join 31,000+ other and never miss out on new tips, tutorials, and more.</p>
     

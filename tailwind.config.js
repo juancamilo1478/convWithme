@@ -17,6 +17,7 @@ module.exports = {
           colorOne: '#4ED4B7', // Color personalizado 1
           colorTwo: '#0fa9e6', // Color personalizado 2
           colorThree: '#0c87b8', // Color personalizado 3
+          navbar1:" #212832"
         },
       },
     },

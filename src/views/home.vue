@@ -1,48 +1,94 @@
 <template>
-  <div class="w-full bg-custom-gradient flex-col pt-56">
-
-
-    <div class="flex justify-between w-full px-10 py-10">
-      <!-- Elemento alineado a la izquierda -->
-      <h1 class="text-brand-colorOne font-black font-nunito text-6xl">What We Offer</h1>
-
-      <!-- Elemento alineado a la derecha -->
-      <div class="  text-white w-1/2 p-4 text-right">
-        <a class="px-6 py-2 min-w-[300px] text-center font-black text-4xl text-white bg-brand-colorOne border  rounded   hover:bg-transparent  focus:outline-none focus:ring"
+  <div class="w-full bg-custom-gradient flex-col ">
+    <div class="flex items-center justify-between px-36 py-10  ">
+      <!-- Contenido Izquierdo -->
+      <div class="text-white w-1/2">
+        <h1 class="text-brand-colorOne font-black font-nunito text-5xl pb-10">What We Offer</h1>
+      </div>
+    
+      <!-- Contenido Derecho -->
+      <div class="text-white w-1/2 flex items-center justify-end"> <!-- Alinea el contenido al centro verticalmente -->
+        <a class="w-1/2 p-5 text-center font-black text-4xl text-white bg-brand-colorOne border rounded hover:bg-transparent focus:outline-none focus:ring"
           href="/download">
           Contact Us
         </a>
       </div>
     </div>
-    <div class="w-full h-auto flex items-stretch">
-      <ol class="list-decimal w-full lg:w-1/2   space-y-2 text-gray-800 ">
-        <li class="text-4xl pb-7 text-white px-5">
-          <span class="font-semibold text-brand-colorOne ">Affordable Solutions</span> – Empower your business with
-          AI-powered chatbots tailored to fit your budget.
-        </li>
-        <li class="text-4xl pb-7 text-white px-5">
-          <span class="font-semibold text-brand-colorOne">Seamless Integration</span> – Connect directly to WhatsApp,
-          Instagram Chat, and Telegram—no extra software needed.
-        </li>
-        <li class="text-4xl pb-7 text-white px-5">
-          <span class="font-semibold text-brand-colorOne">Custom Automation</span> – From managing catalogs to booking
-          appointments, our chatbots adapt to your needs.
-        </li>
-        <li class="text-4xl pb-7 text-white px-5">
-          <span class="font-semibold text-brand-colorOne">AI-Powered Efficiency</span> – Boost customer engagement and
-          streamline operations effortlessly.
-        </li>
-        <li class="text-4xl pb-7 text-white px-5">
-          <span class="font-semibold text-brand-colorOne">Scalable Growth</span> – Our platform grows with your
-          business, offering advanced features as you expand.
-        </li>
-      </ol>
+    <div class="w-full   flex items-stretch ">
+      
+      <div class="  m-auto lg:w-1/2 ">
+        <h1 class="text-white font-medium font-nunito text-3xl pb-10  px-10">What ConvWithMe Brings to Your Business:</h1>
+        <ol class="list-decimal w-full justify-center mr-auto   text-gray-800    px-20">
+         
+          <li class="text-4xl pb-7 text-white">
+            <span class="font-semibold text-brand-colorOne cursor-pointer" @click="toogle('affordable')">
+              Afordable Solutions
+            </span>
+            <span v-if="variables.affordable">
+              - Empower your business with AI-powered chatbots tailored to fit your budget.
+            </span>
+            <span v-else>
+              <button class="text-white underline" @click="toogle('affordable')">View more</button>
+            </span>
+          </li>
+          <li class="text-4xl pb-7 text-white px-5">
+            <span class="font-semibold text-brand-colorOne ">Seamless Integration </span>
+            <span v-if="variables.seamless">
+              - Connect directly to WhatsApp,
+              Instagram Chat, and Telegram—no extra software needed.
+            </span>
+
+            <span v-else>
+              <button class="text-white underline" @click="toogle('seamless')">View more</button>
+            </span>
+
+          </li>
+          <li class="text-4xl pb-7 text-white px-5">
 
 
+            <span class="font-semibold text-brand-colorOne">Custom Automation </span>
+            <span v-if="variables.custom">
+              From managing catalogs to booking
+              appointments, our chatbots adapt to your needs.
 
-      <div class="w-1/2 relative lg:flex items-center justify-center overflow-hidden hidden lg:block   h-auto">
+            </span>
 
-        <svg class=" z-0 absolute bottom-0 right-0  translate-y-1/2  w-full h-auto" width="1000" height="1586"
+            <span v-else>
+              <button class="text-white underline" @click="toogle('custom')">View more</button>
+            </span>
+
+
+          </li>
+          <li class="text-4xl pb-7 text-white px-5">
+            <span class="font-semibold text-brand-colorOne">AI-Powered Efficiency </span>
+            <span v-if="variables.ai">
+              Boost customer engagement and
+              streamline operations effortlessly.
+            </span>
+            <span v-else>
+              <button class="text-white underline" @click="toogle('ai')">View more</button>
+            </span>
+
+          </li>
+          <li class="text-4xl pb-7 text-white px-5">
+            <span class="font-semibold text-brand-colorOne">Scalable Growth </span>
+
+            <span v-if="variables.scalable">
+              Our platform grows with your
+              business, offering advanced features as you expand.
+            </span>
+            <span v-else>
+              <button class="text-white underline" @click="toogle('scalable')">View more</button>
+            </span>
+          </li>
+        </ol>
+
+      </div>
+
+
+      <div class="w-1/3 relative lg:flex items-center justify-center overflow-hidden hidden lg:block   h-auto">
+
+        <svg class=" z-0 absolute bottom-0 right-0  translate-y-1/2  w-full h-auto" width="800" height="auto"
           viewBox="0 0 798 1586" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto;">
           <path
             d="M747.5 990.781C644.601 990.781 560.938 902.063 560.938 792.95C560.938 683.836 644.601 595.12 747.5 595.12C850.398 595.12 934.063 683.836 934.063 792.95C933.906 902.063 850.242 990.781 747.5 990.781ZM747.5 678.198C687.762 678.198 639.128 729.77 639.128 793.116C639.128 856.461 687.762 908.033 747.5 908.033C807.237 908.033 855.872 856.461 855.872 793.116C855.872 729.77 807.237 678.198 747.5 678.198Z"
@@ -62,7 +108,7 @@
         </svg>
 
         <svg class="w-full z-10 h-auto  " viewBox="0 0 710 1001" fill="none" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 100%; height: auto;">
+          xmlns:xlink="http://www.w3.org/1999/xlink" style="width: 80%; height: auto;">
           <g filter="url(#filter0_f_130_671)">
             <rect x="200.509" y="200" width="309.032" height="600.654" rx="46" fill="#222222" fill-opacity="0.2" />
           </g>
@@ -649,9 +695,30 @@
 
 </template>
 <script>
+
+
+
 import HomeCharacters from './HomeCharacters.vue';
 export default {
   name: "home",
+  data() {
+    return {
+      variables: {
+        affordable: false,
+        seamless: false,
+        custom: false,
+        ai: false,
+        scalable: false
+      }
+    }
+  },
+  methods: {
+    toogle(name) {
+      if (this.variables.hasOwnProperty(name)) {
+        this.variables[name] = !this.variables[name];
+      }
+    }
+  },
   components: {
     HomeCharacters
   }

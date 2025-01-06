@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white">
-    <h1 class="text-5xl py-20 px-10 font-nunito font-black ">Why choose ConvWithMe?</h1>
-    <div class="w-full flex flex-wrap justify-center gap-10 p-4 px-10">
+    <h1 class="text-5xl py-20 px-20 font-nunito font-black ">Why choose ConvWithMe?</h1>
+    <div class="w-full flex flex-wrap justify-center gap-16 p-4 px-20">
       <CardItem :text="'Cost-Effective Affordable plans designed for small businesses and entrepreneurs.'">
         <template #icon>
           <!-- Tu SVG aquí -->
