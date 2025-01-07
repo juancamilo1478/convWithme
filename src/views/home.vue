@@ -1,17 +1,16 @@
 <template>
-  <div class="w-full bg-custom-gradient flex-col ">
-    <div class="flex items-center justify-between px-36 py-10  ">
+  <div class="w-full bg-custom-gradient flex-col " id="about">
+    <div class=" flex flex-col md:flex-row items-center justify-between px-10 md:px-20  py-20 md:py-48 md:space-y-0 space-y-5">
       <!-- Contenido Izquierdo -->
-      <div class="text-white w-1/2">
-        <h1 class="text-brand-colorOne font-black font-nunito text-5xl pb-10">What We Offer</h1>
+      <div class="text-white    ">
+        <h1 class="text-brand-colorOne font-black font-nunito text-4xl pb-10 lg:text-6xl">What We Offer</h1>
       </div>
     
       <!-- Contenido Derecho -->
-      <div class="text-white w-1/2 flex items-center justify-end"> <!-- Alinea el contenido al centro verticalmente -->
-        <a class="w-1/2 p-5 text-center font-black text-4xl text-white bg-brand-colorOne border rounded hover:bg-transparent focus:outline-none focus:ring"
-          href="/download">
+      <div class="text-white   flex items-center justify-end">
+        <h1 class="p-5 text-center  font-black text-2xl   md:text-2xl text-white bg-brand-colorOne border rounded hover:bg-transparent focus:outline-none focus:ring inline-block">
           Contact Us
-        </a>
+        </h1>
       </div>
     </div>
     <div class="w-full   flex items-stretch ">
@@ -20,7 +19,7 @@
         <h1 class="text-white font-medium font-nunito text-3xl pb-10  px-10">What ConvWithMe Brings to Your Business:</h1>
         <ol class="list-decimal w-full justify-center mr-auto   text-gray-800    px-20">
          
-          <li class="text-4xl pb-7 text-white">
+          <li class="text-3xl sm:text-2xl md:text-3xl pb-7 text-white">
             <span class="font-semibold text-brand-colorOne cursor-pointer" @click="toogle('affordable')">
               Afordable Solutions
             </span>
@@ -31,7 +30,7 @@
               <button class="text-white underline" @click="toogle('affordable')">View more</button>
             </span>
           </li>
-          <li class="text-4xl pb-7 text-white px-5">
+          <li class="text-3xl sm:text-2xl md:text-3xl pb-7 text-white">
             <span class="font-semibold text-brand-colorOne ">Seamless Integration </span>
             <span v-if="variables.seamless">
               - Connect directly to WhatsApp,
@@ -43,7 +42,7 @@
             </span>
 
           </li>
-          <li class="text-4xl pb-7 text-white px-5">
+          <li class="text-3xl sm:text-2xl md:text-3xl pb-7 text-white">
 
 
             <span class="font-semibold text-brand-colorOne">Custom Automation </span>
@@ -59,7 +58,7 @@
 
 
           </li>
-          <li class="text-4xl pb-7 text-white px-5">
+          <li class="text-3xl sm:text-2xl md:text-3xl pb-7 text-white">
             <span class="font-semibold text-brand-colorOne">AI-Powered Efficiency </span>
             <span v-if="variables.ai">
               Boost customer engagement and
@@ -70,7 +69,7 @@
             </span>
 
           </li>
-          <li class="text-4xl pb-7 text-white px-5">
+          <li class="text-3xl sm:text-2xl md:text-3xl pb-7 text-white">
             <span class="font-semibold text-brand-colorOne">Scalable Growth </span>
 
             <span v-if="variables.scalable">

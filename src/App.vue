@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header class="w-full  bg-brand-navbar1"  >
+  <div class="w-full  bg-brand-navbar1"  >
     <nav class="right-0 pt-0   mt-0 z-50 fixed lg:relative w-full bg-brand-navbar1">
       <div class="px-14 py-4 mx-auto ">
         <div class="lg:flex lg:items-center ">
@@ -36,15 +36,15 @@ import { RouterLink, RouterView } from 'vue-router'
           <div :class="{'translate-x-0 opacity-100': isOpen, '-translate-x-full opacity-0': !isOpen}"
             class="absolute inset-x-0 z-20 flex-1 w-full  transition-all duration-300 ease-in-out bg-slate-700  dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center lg:justify-between" >
             <div class=" flex flex-col text-gray-600 capitalize dark:text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
-              <a href="#" class="mt-2 font-nunito text-3xl font-bold transition-colors duration-300 transform lg:mt-0 lg:mx-4 text-white hover:text-brand-colorOne">Whatch Demo</a>
-              <a href="#" class="mt-2 text-3xl font-bold transition-colors duration-300 transform lg:mt-0 lg:mx-4 text-white hover:text-brand-colorOne">About Us</a>
-              <a href="#" class="mb-2 mt-2 text-3xl font-bold transition-colors duration-300 transform lg:mt-0 lg:mx-4 text-white hover:text-brand-colorOne">Contact</a>
+              <h2  class="mt-2 font-nunito text-3xl font-bold transition-colors duration-300 transform lg:mt-0 lg:mx-4 text-white hover:text-brand-colorOne" @click="scrollToElement('video')">Whatch Demo</h2>
+              <h2 href="#" class="mt-2 text-3xl font-bold transition-colors duration-300 transform lg:mt-0 lg:mx-4 text-white hover:text-brand-colorOne" @click="scrollToElement('about')">About Us</h2>
+              <h2 href="#" class="mb-2 mt-2 text-3xl font-bold transition-colors duration-300 transform lg:mt-0 lg:mx-4 text-white hover:text-brand-colorOne">Contact</h2>
             </div>
           </div>
         </div>
       </div>
     </nav>
-  </header>
+  </div>
   <div>
 
     <RouterView />
@@ -60,73 +60,19 @@ export default {
   methods: {
     toggleMenu() {
       this.isOpen = !this.isOpen; // Alterna el estado del menú
-    }
+    },
+    scrollToElement(id) {
+      // Buscar el elemento por ID
+      const element = document.getElementById(id);
+      if (element) {
+        // Desplazarse suavemente al elemento
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    },
   }
 };
 </script>
 
 
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
+ 
