@@ -66,8 +66,8 @@
     
                         <div>
                             <h3 class="text-brand-colorOne font-nunito font-bold uppercase  ">Contact</h3>
-                            <span class="block mt-2 text-sm text-white  hover:underline font-nunito font-bold">+1 526 654 8965</span>
-                            <span class="block mt-2 text-sm text-white  hover:underline font-nunito font-bold">example@email.com</span>
+         
+                            <span class="block mt-2 text-sm text-white  hover:underline font-nunito font-bold">convwithme@outlook.com</span>
                         </div>
                     </div>
                 </div>
