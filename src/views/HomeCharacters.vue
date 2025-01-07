@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white">
-    <h1 class="text-5xl py-20 px-20 font-nunito font-black ">Why choose ConvWithMe?</h1>
+    <h1 class="text-3xl md:text-5xl lg:text-5xl px-10 py-20 lg:px-20 font-nunito font-black ">Why choose ConvWithMe?</h1>
     <div class="w-full flex flex-wrap justify-center gap-16 p-4 px-20">
       <CardItem :text="'Cost-Effective Affordable plans designed for small businesses and entrepreneurs.'">
         <template #icon>
