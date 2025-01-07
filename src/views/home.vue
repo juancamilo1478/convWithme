@@ -1,14 +1,14 @@
 <template>
   <div class="w-full bg-custom-gradient flex-col " id="about">
-    <div class=" flex flex-col md:flex-row items-center justify-between px-10 md:px-20  py-20 md:py-48 md:space-y-0 space-y-5">
+    <div class="flex flex-row px-6  md:flex-row items-center justify-between   md:px-20  py-20 md:py-48 md:space-y-0 space-y-5">
       <!-- Contenido Izquierdo -->
       <div class="text-white    ">
-        <h1 class="text-brand-colorOne font-black font-nunito text-4xl pb-10 lg:text-6xl">What We Offer</h1>
+        <h1 class="text-brand-colorOne font-black font-nunito text-2xl md:text-4xl   lg:text-6xl ">What We Offer</h1>
       </div>
     
       <!-- Contenido Derecho -->
       <div class="text-white   flex items-center justify-end" @click="navegate('contact')">
-        <h1 class="p-5 text-center  font-black text-2xl   md:text-2xl text-white bg-brand-colorOne border rounded hover:bg-transparent focus:outline-none focus:ring inline-block" >
+        <h1 class="text-center  font-black text-2xl  p-2  md:text-3xl lg:text-5xl lg:p-4 text-white bg-brand-colorOne border rounded hover:bg-transparent focus:outline-none focus:ring  " >
           Contact Us
         </h1>
       </div>
