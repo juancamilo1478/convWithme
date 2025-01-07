@@ -16,10 +16,10 @@
     <div class="w-full   flex items-stretch ">
       
       <div class="  m-auto lg:w-1/2 ">
-        <h1 class="text-white font-medium font-nunito text-3xl pb-10  px-10">What ConvWithMe Brings to Your Business:</h1>
+        <h1 class="text-white font-medium font-nunito text-3xl pb-10  px-5 md:px-8 lg:px-10">What ConvWithMe Brings to Your Business:</h1>
         <ol class="list-decimal w-full justify-center mr-auto   text-gray-800    px-20">
          
-          <li class="text-3xl sm:text-2xl md:text-3xl pb-7 text-white">
+          <li class="text-3xl sm:text-xl md:text-3xl pb-7 text-white">
             <span class="font-semibold text-brand-colorOne cursor-pointer" @click="toogle('affordable')">
               Afordable Solutions
             </span>
@@ -42,7 +42,7 @@
             </span>
 
           </li>
-          <li class="text-3xl sm:text-2xl md:text-3xl pb-7 text-white">
+          <li class="text-3xl sm:text-xl md:text-3xl pb-7 text-white">
 
 
             <span class="font-semibold text-brand-colorOne">Custom Automation </span>
@@ -58,7 +58,7 @@
 
 
           </li>
-          <li class="text-3xl sm:text-2xl md:text-3xl pb-7 text-white">
+          <li class="text-3xl sm:text-xl md:text-3xl pb-7 text-white">
             <span class="font-semibold text-brand-colorOne">AI-Powered Efficiency </span>
             <span v-if="variables.ai">
               Boost customer engagement and
@@ -69,7 +69,7 @@
             </span>
 
           </li>
-          <li class="text-3xl sm:text-2xl md:text-3xl pb-7 text-white">
+          <li class="text-3xl sm:text-xl md:text-3xl pb-7 text-white">
             <span class="font-semibold text-brand-colorOne">Scalable Growth </span>
 
             <span v-if="variables.scalable">
