@@ -7,8 +7,8 @@
       </div>
     
       <!-- Contenido Derecho -->
-      <div class="text-white   flex items-center justify-end">
-        <h1 class="p-5 text-center  font-black text-2xl   md:text-2xl text-white bg-brand-colorOne border rounded hover:bg-transparent focus:outline-none focus:ring inline-block">
+      <div class="text-white   flex items-center justify-end" @click="navegate('contact')">
+        <h1 class="p-5 text-center  font-black text-2xl   md:text-2xl text-white bg-brand-colorOne border rounded hover:bg-transparent focus:outline-none focus:ring inline-block" >
           Contact Us
         </h1>
       </div>
@@ -716,6 +716,9 @@ export default {
       if (this.variables.hasOwnProperty(name)) {
         this.variables[name] = !this.variables[name];
       }
+    },
+    navegate(url){
+      this.$router.push(url);
     }
   },
   components: {
