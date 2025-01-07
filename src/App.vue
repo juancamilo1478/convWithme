@@ -38,7 +38,7 @@ import { RouterLink, RouterView } from 'vue-router'
             <div class=" flex flex-col text-gray-600 capitalize dark:text-gray-300 lg:flex lg:px-16 lg:-mx-4 lg:flex-row lg:items-center">
               <h2  class="mt-2 font-nunito text-3xl font-bold transition-colors duration-300 transform lg:mt-0 lg:mx-4 text-white hover:text-brand-colorOne" @click="scrollToElement('video')">Whatch Demo</h2>
               <h2 href="#" class="mt-2 text-3xl font-bold transition-colors duration-300 transform lg:mt-0 lg:mx-4 text-white hover:text-brand-colorOne" @click="scrollToElement('about')">About Us</h2>
-              <h2 href="#" class="mb-2 mt-2 text-3xl font-bold transition-colors duration-300 transform lg:mt-0 lg:mx-4 text-white hover:text-brand-colorOne">Contact</h2>
+              <h2 href="#" class="mb-2 mt-2 text-3xl font-bold transition-colors duration-300 transform lg:mt-0 lg:mx-4 text-white hover:text-brand-colorOne" @click="navegate('contact')">Contact</h2>
             </div>
           </div>
         </div>
@@ -63,12 +63,22 @@ export default {
     },
     scrollToElement(id) {
       // Buscar el elemento por ID
+      console.log(this.$route.path)
+      const self = this;
+      if(this.$route.path == '/contact' ){
+        
+        this.$router.push('/'); // Usa $router en lugar de $route para navegar
+      return;  
+      }
       const element = document.getElementById(id);
       if (element) {
         // Desplazarse suavemente al elemento
         element.scrollIntoView({ behavior: 'smooth' });
       }
     },
+    navegate(url){
+      this.$router.push(url);
+    }
   }
 };
 </script>
